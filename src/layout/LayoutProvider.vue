@@ -11,15 +11,17 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+
 import AppLayout from './components/AppLayout.vue'
 import AuthLayout from './components/AuthLayout.vue'
 import NotFoundLayout from './components/_404Layout.vue'
 
-const me = ref('Auth')
+const route = useRoute()
 
 const layout = computed(() => {
-  switch (me.value) {
+  switch (route.meta.layout) {
     case 'App':
       return 'App'
     case 'Auth':

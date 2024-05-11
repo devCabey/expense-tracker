@@ -11,7 +11,6 @@ const routes = [
   {
     path: '/',
     component: DashboardView,
-
     meta: {
       label: 'Dashboard',
       icon: '',
@@ -21,7 +20,6 @@ const routes = [
   {
     path: '/earning',
     component: EarningView,
-
     meta: {
       label: 'Earning',
       icon: '',
@@ -31,7 +29,6 @@ const routes = [
   {
     path: '/spending',
     component: SpendingView,
-
     meta: {
       label: 'Spending',
       icon: '',
@@ -41,7 +38,6 @@ const routes = [
   {
     path: '/cards',
     component: CardView,
-
     meta: {
       label: 'Cards',
       icon: '',
@@ -60,7 +56,6 @@ const routes = [
   {
     path: '/settings',
     component: SettingsView,
-
     meta: {
       label: 'Settings',
       icon: '',

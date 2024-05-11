@@ -1,7 +1,7 @@
 <template>
   <main class="container">
     <div class="sidebar">
-      <RouterLink v-for="route in appRoutes" :key="route.path" to="route.path">
+      <RouterLink v-for="route in appRoutes" :key="route.path" :to="route.path">
         {{ route.meta.label }}
       </RouterLink>
     </div>
