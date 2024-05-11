@@ -1,8 +1,8 @@
 <script setup>
-import { RouterView } from 'vue-router'
+import LayoutProvider from './layout/LayoutProvider.vue'
 </script>
 <template>
-  <RouterView />
+  <LayoutProvider />
 </template>
 
 <style scoped></style>

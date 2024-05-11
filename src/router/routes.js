@@ -11,73 +11,78 @@ const routes = [
   {
     path: '/',
     component: DashboardView,
-    layout: 'App',
+
     meta: {
       label: 'Dashboard',
-      icon: ''
+      icon: '',
+      layout: 'App'
     }
   },
   {
     path: '/earning',
     component: EarningView,
-    layout: 'App',
+
     meta: {
       label: 'Earning',
-      icon: ''
+      icon: '',
+      layout: 'App'
     }
   },
   {
     path: '/spending',
     component: SpendingView,
-    layout: 'App',
+
     meta: {
       label: 'Spending',
-      icon: ''
+      icon: '',
+      layout: 'App'
     }
   },
   {
     path: '/cards',
     component: CardView,
-    layout: 'App',
+
     meta: {
       label: 'Cards',
-      icon: ''
+      icon: '',
+      layout: 'App'
     }
   },
   {
     path: '/wallet',
     component: WalletView,
-    layout: 'App',
     meta: {
       label: 'Wallet',
-      icon: ''
+      icon: '',
+      layout: 'App'
     }
   },
   {
     path: '/settings',
     component: SettingsView,
-    layout: 'App',
+
     meta: {
       label: 'Settings',
-      icon: ''
+      icon: '',
+      layout: 'App'
     }
   },
   {
     path: '/signin',
     component: SigninView,
-    layout: 'Auth',
     meta: {
-      label: 'Settings',
-      icon: ''
+      label: 'Login',
+      icon: '',
+      layout: 'Auth'
     }
   },
   {
     path: '/signup',
     component: SignupView,
-    layout: 'Auth',
     meta: {
-      label: 'Settings',
-      icon: ''
+      label: 'Register',
+      icon: '',
+      layout: 'Auth'
     }
   }
 ]
