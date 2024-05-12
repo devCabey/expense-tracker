@@ -7,13 +7,22 @@ import SettingsView from '../views/SettingsView.vue'
 import SigninView from '../views/SigninView.vue'
 import SignupView from '../views/SignupView.vue'
 
+import {
+  BanknotesIcon,
+  CurrencyDollarIcon,
+  CreditCardIcon,
+  WalletIcon,
+  CogIcon,
+  ServerStackIcon
+} from '@heroicons/vue/24/outline'
+
 const routes = [
   {
     path: '/',
     component: DashboardView,
     meta: {
       label: 'Dashboard',
-      icon: '',
+      icon: ServerStackIcon,
       layout: 'App'
     }
   },
@@ -22,7 +31,7 @@ const routes = [
     component: EarningView,
     meta: {
       label: 'Earning',
-      icon: '',
+      icon: BanknotesIcon,
       layout: 'App'
     }
   },
@@ -31,7 +40,7 @@ const routes = [
     component: SpendingView,
     meta: {
       label: 'Spending',
-      icon: '',
+      icon: CurrencyDollarIcon,
       layout: 'App'
     }
   },
@@ -40,7 +49,7 @@ const routes = [
     component: CardView,
     meta: {
       label: 'Cards',
-      icon: '',
+      icon: CreditCardIcon,
       layout: 'App'
     }
   },
@@ -49,7 +58,7 @@ const routes = [
     component: WalletView,
     meta: {
       label: 'Wallet',
-      icon: '',
+      icon: WalletIcon,
       layout: 'App'
     }
   },
@@ -58,7 +67,7 @@ const routes = [
     component: SettingsView,
     meta: {
       label: 'Settings',
-      icon: '',
+      icon: CogIcon,
       layout: 'App'
     }
   },

@@ -1,39 +1,24 @@
-const animate = require("tailwindcss-animate")
-
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: ["class"],
-  content: [
-    './pages/**/*.{js,jsx,vue}',
-    './components/**/*.{js,jsx,vue}',
-    './app/**/*.{js,jsx,vue}',
-    './src/**/*.{js,jsx,vue}',
-	],
-  prefix: "",
+export default {
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
-      keyframes: {
-        "accordion-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
-    },
+      colors: {
+        primary: {
+          50: '#fdfaed',
+          100: '#f8f0cd',
+          200: '#f1df96',
+          300: '#eaca61',
+          400: '#e5b53a',
+          500: '#dd9823',
+          600: '#c3751c',
+          700: '#a2551b',
+          800: '#84431c',
+          900: '#6d381a',
+          950: '#3e1c0a'
+        }
+      }
+    }
   },
-  plugins: [animate],
+  plugins: []
 }
