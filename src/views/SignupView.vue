@@ -1,17 +1,15 @@
 <template>
   <div class="mx-auto w-full max-w-sm lg:w-96">
     <div>
-      <img
-        class="h-10 w-auto"
-        src="https://tailwindui.com/img/logos/mark.svg?color=primary&shade=600"
-        alt="Your Company"
-      />
+      <img class="h-10 w-auto" :src="logo" alt="Your Company" />
       <h2 class="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900">
         Create an account with us
       </h2>
       <p class="mt-2 text-sm leading-6 text-gray-500">
         Already have an account?
-        <a href="/signin" class="font-semibold text-primary-600 hover:text-primary-500">Sign in</a>
+        <RouterLink to="signin" class="font-semibold text-primary-600 hover:text-primary-500"
+          >Sign in</RouterLink
+        >
       </p>
     </div>
 
@@ -138,3 +136,7 @@
     </div>
   </div>
 </template>
+<script setup>
+import { RouterLink } from 'vue-router'
+import logo from '@/assets/logo.jpeg'
+</script>

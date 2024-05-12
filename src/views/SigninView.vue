@@ -3,7 +3,7 @@
     <div>
       <img
         class="h-10 w-auto"
-        src="https://tailwindui.com/img/logos/mark.svg?color=primary&shade=600"
+        :src="logo"
         alt="Your Company"
       />
       <h2 class="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900">
@@ -11,8 +11,8 @@
       </h2>
       <p class="mt-2 text-sm leading-6 text-gray-500">
         Not a member?
-        <a href="/signup" class="font-semibold text-primary-600 hover:text-primary-500"
-          >Create an account</a
+        <RouterLink to="signup" class="font-semibold text-primary-600 hover:text-primary-500"
+          >Create an account</RouterLink
         >
       </p>
     </div>
@@ -140,3 +140,8 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import logo from '@/assets/logo.jpeg'
+import { RouterLink } from 'vue-router'
+</script>

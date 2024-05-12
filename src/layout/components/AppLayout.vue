@@ -43,20 +43,17 @@
               </TransitionChild>
               <!-- Sidebar component, swap this element with another sidebar if you like -->
               <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-2">
-                <div class="flex h-16 shrink-0 items-center">
-                  <img
-                    class="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=primary&shade=600"
-                    alt="Your Company"
-                  />
+                <div class="flex h-16 shrink-0 items-center gap-1">
+                  <img class="h-8 w-auto" :src="logo" alt="Your Company" />
+                  <span class="font-bold">PENSEPLAN</span>
                 </div>
                 <nav class="flex flex-1 flex-col">
                   <ul role="list" class="flex flex-1 flex-col gap-y-7">
                     <li>
                       <ul role="list" class="-mx-2 space-y-1">
                         <li v-for="item in appRoutes" :key="item.path">
-                          <a
-                            :href="item.path"
+                          <RouterLink
+                            :to="item.path"
                             :class="[
                               item.path === router.currentRoute.value.path
                                 ? 'bg-gray-50 text-primary-600'
@@ -75,7 +72,7 @@
                               aria-hidden="true"
                             />
                             {{ item.meta.label }}
-                          </a>
+                          </RouterLink>
                         </li>
                       </ul>
                     </li>
@@ -94,20 +91,17 @@
       <div
         class="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6"
       >
-        <div class="flex h-16 shrink-0 items-center">
-          <img
-            class="h-8 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=primary&shade=600"
-            alt="Your Company"
-          />
+        <div class="flex h-16 shrink-0 items-center gap-1">
+          <img class="h-8 w-auto" :src="logo" alt="Your Company" />
+          <span class="font-bold">PENSEPLAN</span>
         </div>
         <nav class="flex flex-1 flex-col">
           <ul role="list" class="flex flex-1 flex-col gap-y-7">
             <li>
               <ul role="list" class="-mx-2 space-y-1">
                 <li v-for="item in appRoutes" :key="item.path">
-                  <a
-                    :href="item.path"
+                  <RouterLink
+                    :to="item.path"
                     :class="[
                       item.path === router.currentRoute.value.path
                         ? 'bg-gray-50 text-primary-600'
@@ -126,7 +120,7 @@
                       aria-hidden="true"
                     />
                     {{ item.meta.label }}
-                  </a>
+                  </RouterLink>
                 </li>
               </ul>
             </li>
@@ -181,9 +175,10 @@
 </template>
 
 <script setup>
+import logo from '@/assets/logo.jpeg'
 import routes from '@/router/routes'
 import { computed } from 'vue'
-import { RouterView, useRouter } from 'vue-router'
+import { RouterView, useRouter, RouterLink } from 'vue-router'
 import { ref } from 'vue'
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { XMarkIcon, Bars3Icon } from '@heroicons/vue/24/outline'
